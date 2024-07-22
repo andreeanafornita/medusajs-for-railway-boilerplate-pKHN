@@ -91,8 +91,8 @@ const modules = {
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
 const projectConfig = {
-  jwtSecret: process.env.JWT_SECRET,
-  cookieSecret: process.env.COOKIE_SECRET,
+  jwtSecret: process.env.JWT_SECRET || 'default_jwt_secret',
+  cookieSecret: process.env.COOKIE_SECRET || 'default_cookie_secret',
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
